@@ -2,78 +2,168 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Mis Juegos</title>
+  <title>Portfolio de ALR2706</title>
   <style>
     body {
       margin: 0;
       font-family: "Segoe UI", sans-serif;
-      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      background: linear-gradient(135deg, #141e30, #243b55);
       color: #fff;
-      text-align: center;
+      line-height: 1.6;
     }
     header {
-      padding: 2rem;
-      background: rgba(0,0,0,0.3);
+      text-align: center;
+      padding: 3rem 1rem;
+      background: rgba(0,0,0,0.4);
     }
-    h1 {
-      margin: 0;
+    header h1 {
       font-size: 3rem;
-      text-shadow: 2px 2px 8px #000;
+      margin: 0;
+      animation: fadeInDown 1s ease;
     }
-    p {
+    header p {
       font-size: 1.2rem;
-      margin-top: .5rem;
+      color: #ddd;
+      animation: fadeInUp 1.5s ease;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #ffcc00;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 8px black;
+    }
+    .about {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      background: rgba(255,255,255,0.05);
+      padding: 2rem;
+      border-radius: 15px;
     }
     .games {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
-      padding: 3rem;
+      max-width: 1000px;
+      margin: auto;
     }
     .card {
-      background: rgba(0,0,0,0.5);
+      background: rgba(255,255,255,0.05);
       border-radius: 15px;
       padding: 1.5rem;
       box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-      transition: transform 0.3s;
+      transition: transform 0.3s, background 0.3s;
     }
     .card:hover {
       transform: scale(1.05);
+      background: rgba(255,255,255,0.1);
     }
     .card img {
       max-width: 100%;
       border-radius: 10px;
     }
-    .card h2 {
+    .card h3 {
       margin: 1rem 0 0.5rem;
     }
+    .contact {
+      margin-top: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background: #ffcc00;
+      color: #000;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #ffaa00;
+    }
     footer {
+      text-align: center;
       padding: 1rem;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.6);
+      margin-top: 3rem;
       font-size: 0.9rem;
+    }
+
+    /* Animaciones */
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>🔥 Mi Portfolio 🔥</h1>
-    <p>Bienvenido, soy <b>ALR2706</b> un desarrollador de videojuegos indie con un juego publicado🎮</p>
+    <h1> ALR2706 </h1>
+    <p>Desarrollador de juegosindie</p>
+    <nav>
+      <a href="#about">Sobre mí</a>
+      <a href="#games">Mis juegos</a>
+      <a href="#contact">Contacto</a>
+    </nav>
   </header>
 
-  <section class="games">
-    <!-- Tarjeta de tu primer juego -->
-    <div class="card">
-      <img src="https://img.itch.zone/aW1nLzIyNTIwMjQyLnBuZw==/original/SxgnLC.png" alt="Imagen de mi juego">
-      <h2>Mi Primer Juego</h2>
-      <p>Un juego de aventuras pixelart de puzzles y aventuras que se sigue actualizando🏝.</p>
-      <a href="https://electric-nova.itch.io/the-tomb-of-azcuth" style="color:#ffcc00;">👉 Jugar ahora</a>
+  <section id="about">
+    <h2>Sobre mí</h2>
+    <div class="about">
+      <p>¡Hola! Soy ALR2706, un apasionado de los videojuegos y el desarrollo. 
+      De momento tengo un juego publicado, pero esta es solo la primera parada en mi viaje como dev .</p>
     </div>
+  </section>
 
-    <!-- Aquí luego puedes añadir más tarjetas para más juegos -->
+  <section id="games">
+    <h2>Mis Juegos</h2>
+    <div class="games">
+      <!-- Juego 1 -->
+      <div class="card">
+        <img src="https://img.itch.zone/aW1nLzIyNTIwMjQyLnBuZw==/original/SxgnLC.png" alt="Mi primer juego">
+        <h3>Mi Primer Juego</h3>
+        <p>Aventura pixelart.Entras en una cueva y tu objetivo es buscar el artefacto de Azcuth pero habrán muchos obstaculos en el camino . ¿Podras encontrarlo?</p>
+        <a href="https://electric-nova.itch.io/the-tomb-of-azcuth" class="btn"> Jugar ahora</a>
+      </div>
+
+      <!-- Aquí puedes duplicar más tarjetas para otros juegos -->
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contacto</h2>
+    <p>¿Quieres informacion sobre los proyectos? Escríbeme: </p>
+    <div class="contact">
+      <a href="mailto:paratabletkitres@gmail.com" class="btn">📧 Mandar correo</a>
+      <br><br>
+      <a href="https://discord.gg/tuenlace" target="_blank" class="btn">💬 Mi Discord</a>
+    </div>
   </section>
 
   <footer>
-    © 2025 ALR2706 - Todos los derechos reservados 💀🔥
+    © 2025 ALR2706 
   </footer>
 </body>
 </html>
+
