@@ -4,30 +4,6 @@
   <meta charset="utf-8">
   <title>Portfolio de ALR2706</title>
   <style>
-     <section id="countdown">
-    <h2>⏳ Cuenta atrás hasta la medianoche</h2>
-    <p id="timer" style="font-size:1.5rem; font-weight:bold; text-shadow:2px 2px 5px black;"></p>
-  </section>
-
-  <script>
-    function actualizarCuentaAtras() {
-      const ahora = new Date();
-      const medianoche = new Date();
-      medianoche.setHours(24, 0, 0, 0);
-
-      const diferencia = medianoche - ahora;
-
-      const horas = Math.floor(diferencia / (1000 * 60 * 60));
-      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-
-      document.getElementById("timer").textContent = 
-        `${horas}h ${minutos}m ${segundos}s 🔥 hasta la medianoche 💀`;
-    }
-
-    setInterval(actualizarCuentaAtras, 1000);
-    actualizarCuentaAtras();
-  </script>
     body {
       margin: 0;
       font-family: "Segoe UI", sans-serif;
@@ -170,8 +146,6 @@
         <p>Aventura pixelart.Entras en una cueva y tu objetivo es buscar el artefacto de Azcuth pero habrán muchos obstaculos en el camino . ¿Podras encontrarlo?</p>
         <a href="https://electric-nova.itch.io/the-tomb-of-azcuth" class="btn"> Jugar ahora</a>
       </div>
-
-      <!-- Aquí puedes duplicar más tarjetas para otros juegos -->
     </div>
   </section>
 
@@ -185,9 +159,34 @@
     </div>
   </section>
 
+  <!-- ⏳ Cuenta atrás -->
+  <section id="countdown">
+    <h2>⏳ Cuenta atrás hasta la medianoche</h2>
+    <p id="timer" style="font-size:1.5rem; font-weight:bold; text-shadow:2px 2px 5px black;"></p>
+  </section>
+
   <footer>
     © 2025 ALR2706 
   </footer>
+
+  <script>
+    function actualizarCuentaAtras() {
+      const ahora = new Date();
+      const medianoche = new Date();
+      medianoche.setHours(24, 0, 0, 0);
+
+      const diferencia = medianoche - ahora;
+
+      const horas = Math.floor(diferencia / (1000 * 60 * 60));
+      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").textContent = 
+        `${horas}h ${minutos}m ${segundos}s 🔥 hasta la medianoche 💀`;
+    }
+
+    setInterval(actualizarCuentaAtras, 1000);
+    actualizarCuentaAtras();
+  </script>
 </body>
 </html>
-
